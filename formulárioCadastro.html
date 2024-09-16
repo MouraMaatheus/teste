@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Candidatura</title>
+
+    <style>
+        fieldset {
+            background-color: rgb(221, 215, 215);
+            border-radius: 5px;
+        }
+header{
+background-color: rgb(101, 179, 179);
+border-radius: 5px;
+
+}
+input{
+
+    border-radius: 5px;
+}
+select{
+
+    border-radius: 5px;
+}
+
+textarea{
+
+    border-radius: 5px;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;">Recrutamento</h1>
+        
+    </header>
+    <form method="get"></form>
+    <fieldset>
+        <legend>Formulário de Candidatura</legend>
+        <label for="name"> Nome: </label>
+        <input type="text" id="name" name="name" placeholder="Insira seu nome">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Insira seu email">
+        <br><br>
+        <label for="CT">Cargo de Tecnologia</label>
+        <select id="CT" name="cargodetecnologia">
+            <option>-------Selecione-------</option>
+            <option> Desenvolvedor Web</option>
+            <option> Front-End</option>
+            <option> Back-End</option>
+            <option> Manutenção</option>
+            <option> Full Stack</option>
+        </select>
+        <br><br>
+        <label for="genero">Gênero:</label>
+        <input type="radio" id="masculino" name="genero">
+        <label for="genero">Masculino</label>
+        <input type="radio" id="feminino" name="genero">
+        <label for="genero">Feminino</label>
+        <input type="radio" id="Outro" name="genero">
+        <label for="genero">Outro</label>
+        <br><br>
+        <label for="unidadeDeinteresse">Unidade de Interesse:</label>
+        <input type="checkbox" id="fortaleza" name="fortaleza">
+        <label for="unidadeDeinteresse">Fortaleza</label>
+        <input type="checkbox" id="caucaia" name="caucaia">
+        <label for="unidadeDeinteresse">Caucaia</label>
+        <input type="checkbox" id="eusebio" name="eusebio">
+        <label for="unidadeDeinteresse">Eusébio</label>
+        <br><br>
+        <label for="comentaio">Fale mais sobre você:</label><br>
+        <textarea style="resize: none;" name="comentario" id="comentario" placeholder="Comente aqui" rows="10" cols="50"
+            maxlength="200"></textarea>
+        <br><br>
+        <input type="button" value="Enviar">
+
+    </fieldset>
+    </form>
+</body>
+
+</html>
