@@ -1,0 +1,80 @@
+*
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin: 0px;     
+}
+h1{
+    margin: 0px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+header p{
+    margin: 16px;
+}
+article{
+    background-color: rgb(180, 187, 187);
+    border-radius: 10px;
+    width: 320px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+article p{
+    padding: 10px 15px;
+}
+footer{
+    background-color: orangered;
+    height: 50px;
+    text-align: center;
+}
+footer h4{
+    padding-top: 15px;
+    color: white;
+}
+.conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+a:hover{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+}
+.home{
+    background-color: rgb(104, 77, 44);
+    border-radius: 10px;
+}
+.intro:hover{
+    background-color: rgb(209, 179, 141);
+   transition: 1s;
+}
+#suco:hover{
+    background-image: url('img/vitaminadogiga.png');
+    background-color: rgb(209, 179, 141);
+    background-size: 90px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+@media(max-width:600px) (orientation: landscape ){
+    header{
+        background-color: rgb(122, 94, 59);
+    }
+}
