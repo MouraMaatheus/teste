@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+#cadastro{
+    justify-content: right;
+}
+.endereço{
+    border-radius: 5px;
+}
+
+header {
+    padding: 100px;
+    margin: 0px;
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    
+    
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    
+}
+.Sessão1{
+    display: flex;
+    
+
+ 
+}
+footer{
+    margin: 0px;
+    padding: 0px;
+}
