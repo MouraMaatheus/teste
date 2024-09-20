@@ -1,25 +1,51 @@
-body {
+/* body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px;
     margin: 0px;
 }
-#cadastro{
-    justify-content: right;
+
+header div a{
+    text-decoration: none;
+    color: white;
 }
-.endereço{
-    border-radius: 5px;
+#up{
+    color: black;
+    background-size: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.cadastro{
+    display: flex;
+    justify-content: flex-end;
+}
+.cadastro a{
+    padding: 10px;
+}
+.sing a{
+    align-items: center;
 }
 
+
 header {
-    padding: 100px;
+    
+    background-image: url("img/SmartSelect_20240919_110351_Samsung\ Notes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
     margin: 0px;
+    width: 100%;
 }
-#logo{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
+.door{
+    align-self: center;
     
-    
+}
+
+
+.logo{
+display: flex;
+justify-content: space-between;
+align-items: center;
+     
 }
 
 header h1 {
@@ -28,16 +54,93 @@ header h1 {
 }
 
 nav {
-    text-align: center;
+    justify-content: center;
+    border-color: transparent;
+    border: 0 none;
+    outline: 0;
     
 }
-.Sessão1{
+.sing{
     display: flex;
-    
-
- 
+    align-items: center;
+    justify-content: center;
 }
+.sessão1{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.sessão2{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding: 40px;
+}
+.sessão2 a{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+   
+.sessão3{
+    display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding: 40px;
+      
+}
+
 footer{
     margin: 0px;
     padding: 0px;
+    width: 100%;
+} */
+ body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+.topoHeader{
+display: flex;
+justify-content: space-between;
+}
+ 
+ header{
+    background-image: url("img/SmartSelect_20240919_110351_Samsung\ Notes.jpg");
+    background-size: cover;
+
+ }
+header div a{
+    text-decoration: none;
+}
+header h1{
+    text-align: center;
+    color: #fff;
+}
+.endereço{
+    text-align: center;
+}
+.linkEndereco{
+    text-align: center;
+}
+.itens{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.paragrafoCard{
+    width: 200px;
+}
+.imagensCard{
+    width: 150px;
+}
+.itens2{
+    display: flex;
+    justify-content: center;
+}
+.paragrafoCard2{
+    width: 300px;
 }
