@@ -56,37 +56,112 @@
 
 // if( IMC <20){
 //     alert('IMC = Abaixo do Peso')
-// }else if(IMC >=20 && IMC <=25 ){
+// }else if(IMC >=20 && IMC <25 ){
 //     alert('IMC = Peso Normal')
-// }else if(IMC >25 && IMC <=30){
+// }else if(IMC >=25 && IMC <30){
 //     alert('IMC = Sobre Peso')
-// }else if(IMC >30 && IMC <40 ){
+// }else if(IMC >=30 && IMC <40 ){
 //     alert('IMC = Obeso')
 // }else if(IMC >=40){
 //     alert('IMC = Obeso Móbido')
+// }  
+ 
+// let saldo = parseFloat(prompt('Digite seu saldo'))
+// if(saldo <=500){
+//     alert('Nenhum Crédito')
+// }else if (saldo >500 && saldo <=1000){
+//     let credito = saldo *(30/100)
+//     alert('Seu saldo: '+ saldo +'\nCrédito: ' + credito)
+// }else if(saldo > 1000 && saldo <=3000){
+//     let credito = saldo *(40/100)
+//     alert('Seu saldo: '+ saldo +'\nCrédito: ' + credito)
+// }else if(saldo >3000){
+//     let credito = saldo *(50/100)
+//     alert('Seu saldo: '+ saldo +'\nCrédito: ' + credito)
 // }
 
-let saldoMedio = parseFloat(prompt('Informe seu Salário'))
-let percentual1 = saldoMedio * (30/100)
+// let prato = parseInt(prompt('Digite seu Prato: \n1 - Vegetariano \n2 - Peixe \n3 - Frango \n4 - Carne'))
+// let caloria = 0;
 
-if(saldoMedio >=0 || saldoMedio <=500){
-    alert('Nenhum Crédito')
-}else if(saldoMedio + percentual1 >=501 || saldoMedio + percentual1 <=1000 ){
-    alert(saldoMedio ,'e', percentual1)
+// if(prato == 1){
+//     caloria = caloria + 180
+// }else if (prato == 2){
+//     caloria += 230;
+// }else if ( prato == 3){
+//     caloria += 250;
+// }else if(prato == 4){
+//     caloria += 350;
+// }
+// let sobremesa = parseInt(prompt('Digite sua Sobremesa: \n1 - Abacaxi \n2 - Sorvete diet \n3 - Mouse diet \n4 - Mouse chocolate'))
+
+// if(sobremesa == 1){
+//     caloria += 75
+// }else if(sobremesa == 2){
+//     caloria += 110
+// }else if(sobremesa == 3){
+//     caloria += 170
+// }else if(sobremesa == 4){
+//     caloria += 200
+// }
+// let bebida = parseInt(prompt('Digite sua Bebida: \n1 - Chá \n2 - Suco de Laranja \n3 - Suco de Melão \n4 - Refrigerante diet'))
+// if(bebida == 1){
+//     caloria += 20
+// }else if(bebida == 2){
+//     caloria += 70
+// }else if(bebida == 3){
+//     caloria += 100
+// }else if(bebida == 4){
+//     caloria += 65
+// }
+//     alert('Total de Calorias é: '+ caloria)
+
+// let diaDaSemana = parseInt(prompt('Digite o dia da Semana: \n1 - Domingo \n2 - Segunda \n3 - Terça \n4 - Quarta \n5 - Quinta \n6 - Sexta \n7 - Sábado'))
+
+// if (diaDaSemana == 1){
+//     alert('Domingo')
+// }else if(diaDaSemana == 2){
+//     alert('Segunda')
+// }
+// else if(diaDaSemana == 3){
+//     alert('Terça')
+// }
+// else if(diaDaSemana == 4){
+//     alert('Quarta')
+// }
+// else if(diaDaSemana == 5){
+//     alert('Quinta')
+// }
+// else if(diaDaSemana == 6){
+//     alert('Sexta')
+// }
+// else if(diaDaSemana == 7){
+//     alert('Sábado')
+// }else if (diaDaSemana  > 7){
+//     alert('Deus não fez esse dia')}
+let senha = 'lobo'
+let senhaDigitada = prompt('Digite a Senha')
+
+for (var i = 1; i < 3 ; i++){
+    if(senha == senhaDigitada){
+        
+        break;
+    }else{
+        alert('Senha incorreta')
+        senhaDigitada = prompt('Digite a Senha')
+        
+    } 
 }
-    
-
-
-
-
-
-
-
+console.log(i)
+if(i == 3 && senha != senhaDigitada){
+    alert('Você foi Bloqueado')
+}else{
+    alert('Senha correta')
+}
 
 </script>
 
 
-18
+
 
 </head>
 <body>
