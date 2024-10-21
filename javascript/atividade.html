@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body style="text-align: center;">
+
+    <form>
+        <label for="modelo">Modelo:</label>
+        <input type="text" name="modelo" id="modelo" placeholder="Modelo"><br><br>
+        <label for="Portas">Portas:</label>
+        <input type="text" name="Portas" id="Portas" placeholder="portas"><br><br>
+        <label for="Cor">Cor:</label>
+        <input type="text" name="Cor" id="cor" placeholder="CoR"><br><br>
+        <label for="Imagem">Imagem:</label>
+        <input type="text" name="Imagem" id="Imagem" placeholder="imAGEM"><br><br>
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+    </form>
+    <hr>
+    <div id="campoBusca">
+        <h1>Buscar o Carro</h1>
+        <input type="text" name="" id="modeloBuscado">
+        <button onclick="buscar()" type="button">Buscar</button>
+    </div>
+
+
+</body>
+
+<script>
+
+    let carros = [
+        {modelo: 'gol',
+            portas: '2',
+            cor: 'preto',
+            imagem: 'imagem'
+        },
+        {
+            modelo: 'celta',
+            portas: '4',
+            cor: 'verde',
+            imagem: 'doi' 
+        }
+            
+    ]
+
+
+
+    function cadastrar() {
+        let modelo = document.getElementById('modelo').value
+        let portas = document.getElementById('Portas').value
+        let cor = document.getElementById('cor').value
+        let Imagem = document.getElementById('Imagem').value
+
+        let carro = {
+            modelo: modelo,
+            portas: portas,
+            cor: cor,
+            imagem: Imagem
+        }
+        carros.push(carro)
+        console.log(carros)
+    }
+    function buscar() {
+        let busca = document.getElementById('modeloBuscado').value
+        busca = parseInt(busca)
+        let carroBuscado = carros[busca]
+        console.log(carroBuscado.modelo)
+
+
+
+
+        let titulo = document.createElement('h1')
+        titulo.innerHTML = carros[busca].modelo
+
+        // let divResultado  = document.getElementById('campoBusca')
+        // console.log(divResultado)
+
+        // divResultado.appendChild(titulo)
+    }
+    
+
+
+</script>
+
+
+
+</html>

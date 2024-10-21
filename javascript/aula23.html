@@ -1,29 +1,67 @@
+QUESTÃO 01:
+
+Crie um formulário de login com campos de email e senha. Utilize o evento submit para validar se ambos os campos estão preenchidos. Caso contrário, exiba uma mensagem de erro usando if/else
+
 <!DOCTYPE html>
 <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
+</head>
+<body>
+    <input type="email" id="email">
+    <br>
+    <input type="password" id="senha">
+    <br>
+    <button onclick="validarCampos()">Enviar</button>
+    
+</body>
+
+<script>
+    function validarCampos() {
+        let email = document.getElementById('email')
+        let senha = document.getElementById('senha')
+        if (email.value == '' || senha.value == '') {
+            alert('Erro')
+        }else{
+            alert('campos preenchidos')
+        }
+        
+    }
+
+</script>
+
+</html>
+
+
+
+
+=========================================================================
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         .megaman{
-            border: solid 5px rgb(55, 0, 255);
+            border: solid 5px blue;
         }
-        .mmario{
-            border: solid 5px red;
+        .mario{
+            border: 5px solid red;
         }
         .xuxu{
             border-radius: 10px;
             margin: 20px;
             padding: 20px;
-            background-color: rgb(255, 0, 0);
+            background-color: red;
         }
-
-
     </style>
 
 </head>
-
 <body>
     <h3>Valor dos inputs -> .value</h3>
     <h3>Conteudo do HTML de uma tag -> .innerHTML -> processa o código HTML</h3>
@@ -34,34 +72,31 @@
 
     <h3>Remover atributos -> .removeAttribute('atributo')</h3>
 
-    <h2>Manipulação de estilos</h2>
+    <h2>Manipulação de Estilo </h2>
     <h3>Modificação de classe</h3>
     <ul>
-        <li>Adicionar .classList.add </li>
-        <li>Remover .classList.remove</li>
-        <li>Trocar .classList.toggle</li>
-        <li>Verificar a .classe.</li>
+        <li>Adicionar .classList.add('Classe')</li>
+        <li>Remover .classList.remove('Classe')</li>
+        <li>Trocar .classList.toggle('Classe')</li>
+        <li>Verificar a classe .classList.contains('Classe')</li>
     </ul>
 
-    <p onclick="verificarParagrafo()" id="paragrafo1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
-        velit beatae minus similique corrupti culpa eos quaerat ut! Explicabo incidunt quod expedita doloremque
-        accusamus error eveniet doloribus odio, corporis nihil.</p>
 
-    <p onclick="verificarParagrafo()" id="paragrafo2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
-        velit beatae minus similique corrupti culpa eos quaerat ut! Explicabo incidunt quod expedita doloremque
-        accusamus error eveniet doloribus odio, corporis nihil.</p>
+    <p onclick="verificarParagrafo()" id="paragrafo1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet velit beatae minus similique corrupti culpa eos quaerat ut! Explicabo incidunt quod expedita doloremque accusamus error eveniet doloribus odio, corporis nihil.</p>
 
-    <img  class="megaman xuxu" onclick="trocarImagem()" id="imagem1"
-        src="https://s2-techtudo.glbimg.com/xTAzyy52W2Ek9zd2jubQsr7PR3g=/0x0:695x505/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/A/B/pipNqqRKutA7AWqA3prA/2014-09-29-megama-x-capa.jpg"
-        alt="Imagem de um jogo" width="200px">
+    <p onclick="verificarParagrafo()" id="paragrafo2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet velit beatae minus similique corrupti culpa eos quaerat ut! Explicabo incidunt quod expedita doloremque accusamus error eveniet doloribus odio, corporis nihil.</p>
+
+    <img class="megaman" onclick="trocarImagem()" id="imagem1" src="https://s2-techtudo.glbimg.com/xTAzyy52W2Ek9zd2jubQsr7PR3g=/0x0:695x505/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/A/B/pipNqqRKutA7AWqA3prA/2014-09-29-megama-x-capa.jpg" alt="Imagem de um jogo" width="200px">
+
     <br>
     <button id="botao" onclick="removerAtributo()">Remover Imagem</button>
-    <button id="botao2" onclick="removerAtributo()">Adicionar xuxu</button>
+    <button id="botao2" onclick="adicionarClasse()">Adicionar xuxu</button>
+    <button id="botao3" onclick="removerClasse()">Remover xuxu</button>
 
 
 
     <br><br><br><br><br><br><br><br><br><br><br><br>
-
+    
 </body>
 
 <script>
@@ -71,7 +106,7 @@
 
     let imagem = document.getElementById('imagem1')
 
-    function verificarParagrafo() {
+    function verificarParagrafo(){
         let paragrafo1 = document.getElementById('paragrafo1')
         let paragrafo2 = document.getElementById('paragrafo2')
 
@@ -82,49 +117,42 @@
         paragrafo2.textContent = '<h1>Aqui foi um paragrafo</h1>'
     }
 
-
-
-    function trocarImagem() {
+        
+    
+    function trocarImagem(){
         let imagem = document.getElementById('imagem1')
 
-        if (imagem.getAttribute('src') == megaman) {
-            imagem.setAttribute('src', mario)
-        } else {
-            imagem.setAttribute('src', megaman)
+        if(imagem.getAttribute('src') == megaman){
+            imagem.setAttribute('src',mario)
+        }else{
+            imagem.setAttribute('src',megaman)
         }
     }
 
-    function removerAtributo() {
+    function removerAtributo(){
         let imagem = document.getElementById('imagem1')
         let botao = document.getElementById('botao')
-
-        if (imagem.getAttribute('src') == null) {
-            imagem.setAttribute('src', megaman)
+        
+        if(imagem.getAttribute('src') == null){
+            imagem.setAttribute('src',megaman)
             botao.textContent = 'Remover Imagem'
 
-        } else {
+        }else{
             imagem.removeAttribute('src')
             botao.textContent = 'Voltar Imagem'
-            
         }
     }
     function adicionarClasse(){
         let imagem = document.getElementById('imagem1')
         imagem.classList.add('xuxu')
-        let temClasse = imagem.classList.contains('megaman')
+        let temClasse = imagem.classList.contains('mario')
         console.log(temClasse)
     }
 
-
-
-
-
-
-
-
-
-
-
+    function removerClasse(){
+        let imagem = document.getElementById('imagem1')
+        imagem.classList.toggle('mario')
+    }
 
 </script>
 

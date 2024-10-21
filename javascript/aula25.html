@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Lista de Carros</h1>
+    <button onclick="listarCarrosConsole()" id="listaCarros">Listar Carrros<button>
+    <button onclick="mostrarModelos()" id="mostrarModelos">Mostrar Modelos</button>
+    <button id="filtarCarros">Filtrar Carros Caros</button>
+    <button id="calcularPreco">Calcular Preço Total</button>
+    
+    <ul id="resultado"></ul>
+</body>
+
+<script>
+    // let lista = document.getElementById('resultado)');
+    // console.log(lista);
+    // let item =  document.createElement("li")
+
+    // let modelo = "gol";
+
+    // item.innerHTML = `O modelo do carro é ${modelo} esse carro é bom`;
+
+let carros = [
+    {modelo : 'Fusca', preco : 15000 , ano: 1972},
+    {modelo : 'Civic', preco : 80000 , ano: 2020},
+    {modelo : 'Fiesta', preco : 45000 , ano: 2015},
+    {modelo : 'Camaro', preco : 30000 , ano: 2021},
+    {modelo : 'Gol', preco : 30000 , ano: 2010},
+    {modelo : 'Corola', preco : 70000 , ano: 2019},]
+
+    function listarCarrosConsole() {
+        carros.forEach(
+            carro => {
+                console.log(carro.modelo)
+            }
+        )
+    }
+        
+    function mostrarModelos(){
+        let modelos = carros.map(
+            carro => {
+                return carro.modelo;
+            });
+
+            let lista = document.getElementById("resultado")
+            console.log(lista);
+
+            modelos.forEach(
+                modelo => {
+                    let item = document.createElement('li')
+                    item.innerHTML = modelo
+                    lista.appendChild(item)
+                }
+            )
+        
+    }
+
+    
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>

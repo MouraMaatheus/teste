@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<
+    <script>
+        fetch('https://fakestoreapi.com/products/')
+            .then(resposta => resposta.json())
+            .then((dados) => {
+            console.log(dados[1]);
+        })
+        .catch(
+            erro => {
+                console.log('Ocorreu um erro')
+            }
+        )
+function buscarCep (){
+    let cepDigitado = document.getElementById('cep').value
+    console.log(cepDigitado)
+    fetch("")
+}
+
+    </script>
+<body>
+    <form action="">
+        <input id="cep" type="text" placeholder="Digite seu CEP">
+        <button onclick="" type="button">Enviar</button>
+    </form>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
